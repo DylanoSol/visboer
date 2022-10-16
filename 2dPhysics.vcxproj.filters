@@ -19,4 +19,8 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Dependencies\SDL2\lib\x64\SDL2.dll" />
+    <CopyFileToFolders Include="Dependencies\SDL2_ttf\lib\x64\SDL2_ttf.dll" />
+  </ItemGroup>
 </Project>
