@@ -7,7 +7,7 @@ const int SCR_HEIGHT = 480;
 
 int main(int argc, char* args[])
 {
-	std::cout << "Hello World" << std::endl; 
+	std::cout << "Hello Jesse" << std::endl; 
 
     //The window we'll be rendering to
     SDL_Window* window = NULL;
