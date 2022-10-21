@@ -2,12 +2,19 @@
 #include <SDL.h>
 #include <SDL_ttf.h>
 
+#include "..\Primitives\vbRectangleShape.h"
+
+
 const int SCR_WIDTH = 640; 
 const int SCR_HEIGHT = 480; 
 
 int main(int argc, char* args[])
 {
 	std::cout << "Hello Jesse" << std::endl; 
+
+    vbCollisionShape* test = new vbRectangleShape(vbVec2(10.f, 10.f), vbVec2(20.f, 20.f));
+
+    printf("%d \n", test->GetCollisionType());
 
     //The window we'll be rendering to
     SDL_Window* window = NULL;
@@ -43,6 +50,7 @@ int main(int argc, char* args[])
             SDL_Event e; bool quit = false; while (quit == false) { while (SDL_PollEvent(&e)) { if (e.type == SDL_QUIT) quit = true; } }
         }
     }
+
 
         //Destroy window
     SDL_DestroyWindow( window );
