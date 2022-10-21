@@ -23,7 +23,7 @@ int main(int argc, char* args[])
     else
     {
         //Create window
-        window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCR_WIDTH, SCR_HEIGHT, SDL_WINDOW_SHOWN);
+        window = SDL_CreateWindow("Visboer Window", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCR_WIDTH, SCR_HEIGHT, SDL_WINDOW_SHOWN);
         if (window == NULL)
         {
             printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
@@ -34,7 +34,7 @@ int main(int argc, char* args[])
             screenSurface = SDL_GetWindowSurface(window);
 
             //Fill the surface white
-            SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0xFF, 0xFF, 0xFF));
+            SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0x00, 0xFF, 0xFF));
 
             //Update the surface
             SDL_UpdateWindowSurface(window);

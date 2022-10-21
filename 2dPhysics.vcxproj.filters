@@ -23,4 +23,9 @@
     <CopyFileToFolders Include="Dependencies\SDL2\lib\x64\SDL2.dll" />
     <CopyFileToFolders Include="Dependencies\SDL2_ttf\lib\x64\SDL2_ttf.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Math\vbVec2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
