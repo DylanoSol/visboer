@@ -3,6 +3,7 @@
 #include <SDL_ttf.h>
 
 #include "..\Primitives\vbRectangleShape.h"
+#include "..\Primitives\vbCircleShape.h"
 
 
 const int SCR_WIDTH = 640; 
@@ -13,8 +14,10 @@ int main(int argc, char* args[])
 	std::cout << "Hello Jesse" << std::endl; 
 
     vbCollisionShape* test = new vbRectangleShape(vbVec2(10.f, 10.f), vbVec2(20.f, 20.f));
+    vbCollisionShape* test2 = new vbCircleShape(vbVec2(100.f, 100.f), 20.f);
 
     printf("%d \n", test->GetCollisionType());
+    printf("%d \n", test2->GetCollisionType());
 
     //The window we'll be rendering to
     SDL_Window* window = NULL;

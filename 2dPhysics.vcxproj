@@ -148,6 +148,7 @@
     <ClCompile Include="Core\Main.cpp" />
     <ClCompile Include="Primitives\vbCollisionShape.cpp" />
     <ClCompile Include="Primitives\vbRectangleShape.cpp" />
+    <ClCompile Include="Primitives\vbCircleShape.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Dependencies\SDL2\lib\x64\SDL2.dll">
@@ -163,6 +164,7 @@
     <ClInclude Include="Math\vbVec2.h" />
     <ClInclude Include="Primitives\vbCollisionShape.h" />
     <ClInclude Include="Primitives\vbRectangleShape.h" />
+    <ClInclude Include="Primitives\vbCircleShape.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
