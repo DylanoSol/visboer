@@ -22,6 +22,9 @@ public:
 	//This function solely exists as a safeguard. Do not use this to create dynamic objects. 
 	void SetObjectType(vbObjectType type); 
 
+	vbCollisionType GetCollisionType();
+	vbObjectType GetObjectType(); 
+
 private: 
 	vbObjectType m_objectType = vbObjectType::UNDEFINED; 
 };

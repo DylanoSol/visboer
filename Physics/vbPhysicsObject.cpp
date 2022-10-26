@@ -25,3 +25,13 @@ void vbPhysicsObject::SetObjectType(vbObjectType type)
 {
 	m_objectType = type; 
 }
+
+vbObjectType vbPhysicsObject::GetObjectType()
+{
+	return m_objectType; 
+}
+
+vbCollisionType vbPhysicsObject::GetCollisionType()
+{
+	return m_shape->GetCollisionType();
+}
