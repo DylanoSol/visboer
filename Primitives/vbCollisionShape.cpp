@@ -2,5 +2,5 @@
 
 vbCollisionType vbCollisionShape::GetCollisionType()
 {
-	return m_type; 
+	return m_collisionType; 
 }

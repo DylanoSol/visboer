@@ -15,7 +15,7 @@ public:
 	vbCollisionType GetCollisionType();
 
 protected: 
-	vbCollisionType m_type = vbCollisionType::UNDEFINED; 
+	vbCollisionType m_collisionType = vbCollisionType::UNDEFINED; 
 
 private: 
 

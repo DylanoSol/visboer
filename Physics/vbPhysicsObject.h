@@ -14,6 +14,6 @@ public:
 	vbPhysicsObject(); 
 
 private: 
-
+	vbObjectType m_objectType = vbObjectType::UNDEFINED; 
 };
 
