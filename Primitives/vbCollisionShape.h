@@ -4,9 +4,9 @@
 
 enum class vbCollisionType
 {
-	Undefined = 1 << 0,
-	Rectangle = 1 << 1, 
-	Circle = 1 << 2, 
+	UNDEFINED = 1 << 0,
+	RECTANGLE = 1 << 1, 
+	CIRCLE = 1 << 2, 
 };
 
 class vbCollisionShape
@@ -15,7 +15,7 @@ public:
 	vbCollisionType GetCollisionType();
 
 protected: 
-	vbCollisionType m_type = vbCollisionType::Undefined; 
+	vbCollisionType m_type = vbCollisionType::UNDEFINED; 
 
 private: 
 
