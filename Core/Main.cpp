@@ -5,6 +5,7 @@
 #include "..\Primitives\vbRectangleShape.h"
 #include "..\Primitives\vbCircleShape.h"
 #include "..\Physics\vbPhysicsObject.h"
+#include "..\Physics\vbWorld.h"
 
 
 const int SCR_WIDTH = 640; 
@@ -13,10 +14,12 @@ const int SCR_HEIGHT = 480;
 int main(int argc, char* args[])
 {
 	std::cout << "Hello Jesse" << std::endl; 
-
+    vbWorld* world = new vbWorld(); 
     vbCollisionShape* test = new vbRectangleShape(vbVec2(10.f, 10.f), vbVec2(20.f, 20.f));
     vbCollisionShape* test2 = new vbCircleShape(vbVec2(100.f, 100.f), 20.f);
     vbPhysicsObject* test3 = new vbPhysicsObject(test2, -1.f);
+    world->AddRigidBody(test3); 
+    world->RemoveRigidBody(test3); 
 
     printf("%d \n", test->GetCollisionType());
     printf("%d \n", test3->GetObjectType());
