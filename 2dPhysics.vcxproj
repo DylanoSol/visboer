@@ -149,6 +149,8 @@
     <ClCompile Include="Primitives\vbCollisionShape.cpp" />
     <ClCompile Include="Primitives\vbRectangleShape.cpp" />
     <ClCompile Include="Primitives\vbCircleShape.cpp" />
+    <ClCompile Include="Physics\vbPhysicsObject.cpp" />
+    <ClCompile Include="Physics\vbWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Dependencies\SDL2\lib\x64\SDL2.dll">
@@ -165,6 +167,8 @@
     <ClInclude Include="Primitives\vbCollisionShape.h" />
     <ClInclude Include="Primitives\vbRectangleShape.h" />
     <ClInclude Include="Primitives\vbCircleShape.h" />
+    <ClInclude Include="Physics\vbPhysicsObject.h" />
+    <ClInclude Include="Physics\vbWorld.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
