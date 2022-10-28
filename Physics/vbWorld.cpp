@@ -18,5 +18,8 @@ void vbWorld::RemoveRigidBody(vbPhysicsObject* object)
 
 void vbWorld::StepWorld()
 {
+	for (vbPhysicsObject* object: m_worldObjects)
+	{
 
+	}
 }

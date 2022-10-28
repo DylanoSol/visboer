@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Primitives/vbCollisionShape.h"
+#include "../Math/vbVec2.h"
 
 enum class vbObjectType
 {
@@ -15,6 +16,7 @@ class vbPhysicsObject
 public: 
 	//Make sure to pass a shape and a mass. Read the documentation to see what certain masses do. 
 	vbPhysicsObject(vbCollisionShape* shape, float mass); 
+	void Update(); 
 
 	vbCollisionShape* m_shape = nullptr;
 	float m_mass = 0.f; 
@@ -24,6 +26,8 @@ public:
 
 	vbCollisionType GetCollisionType();
 	vbObjectType GetObjectType(); 
+
+	vbVec2 m_position;
 
 private: 
 	vbObjectType m_objectType = vbObjectType::UNDEFINED; 

@@ -35,3 +35,8 @@ vbCollisionType vbPhysicsObject::GetCollisionType()
 {
 	return m_shape->GetCollisionType();
 }
+
+void vbPhysicsObject::Update()
+{
+
+}

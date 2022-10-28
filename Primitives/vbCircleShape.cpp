@@ -1,8 +1,7 @@
 #include "vbCircleShape.h"
 
-vbCircleShape::vbCircleShape(vbVec2 pos, float radius)
-{
-	m_position = pos; 
+vbCircleShape::vbCircleShape(float radius)
+{ 
 	m_radius = radius; 
 	m_collisionType = vbCollisionType::CIRCLE; 
 }
