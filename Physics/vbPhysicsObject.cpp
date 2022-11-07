@@ -1,6 +1,6 @@
 #include "vbPhysicsObject.h"
 
-vbPhysicsObject::vbPhysicsObject(vbCollisionShape* shape, float mass)
+vbPhysicsObject::vbPhysicsObject(vbCollisionShape* shape, float mass, vbVec2 position)
 {
 	m_shape = shape; 
 	m_mass = mass; 

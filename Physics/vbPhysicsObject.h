@@ -15,7 +15,7 @@ class vbPhysicsObject
 {
 public: 
 	//Make sure to pass a shape and a mass. Read the documentation to see what certain masses do. 
-	vbPhysicsObject(vbCollisionShape* shape, float mass); 
+	vbPhysicsObject(vbCollisionShape* shape, float mass, vbVec2 position);
 	void Update(); 
 
 	vbCollisionShape* m_shape = nullptr;
