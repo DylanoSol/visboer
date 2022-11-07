@@ -2,7 +2,7 @@
 class vbDispatcher
 {
 public: 
-
+	vbDispatcher(); 
 private: 
 
 };

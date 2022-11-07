@@ -20,6 +20,7 @@ void vbWorld::StepWorld()
 {
 	for (vbPhysicsObject* object: m_worldObjects)
 	{
-
+		printf("h");
 	}
+	printf("newtick");
 }

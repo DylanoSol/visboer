@@ -16,10 +16,13 @@ int main(int argc, char* args[])
 	std::cout << "Hello Jesse" << std::endl; 
     vbWorld* world = new vbWorld(); 
     vbCollisionShape* test = new vbRectangleShape(vbVec2(10.f, 10.f), vbVec2(20.f, 20.f));
-    vbCollisionShape* test2 = new vbCircleShape(vbVec2(100.f, 100.f), 20.f);
+    vbCollisionShape* test2 = new vbCircleShape(20.f);
     vbPhysicsObject* test3 = new vbPhysicsObject(test2, -1.f);
+    vbPhysicsObject* test4 = new vbPhysicsObject(test2, 1.f); 
     world->AddRigidBody(test3); 
-    world->RemoveRigidBody(test3); 
+    world->AddRigidBody(test4); 
+
+    world->RemoveRigidBody(test4); 
 
     printf("%d \n", test->GetCollisionType());
     printf("%d \n", test3->GetObjectType());
@@ -55,10 +58,19 @@ int main(int argc, char* args[])
             SDL_UpdateWindowSurface(window);
 
             //Hack to get window to stay up
-            SDL_Event e; bool quit = false; while (quit == false) { while (SDL_PollEvent(&e)) { if (e.type == SDL_QUIT) quit = true; } }
+            SDL_Event e; bool quit = false; while (quit == false) 
+            { 
+                while (SDL_PollEvent(&e)) 
+                { 
+                    world->StepWorld();
+                    if (e.type == SDL_QUIT) quit = true; 
+                } 
+            }
         }
     }
 
+
+    world->RemoveRigidBody(test3);
 
         //Destroy window
     SDL_DestroyWindow( window );
